@@ -5,15 +5,6 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static String stateToString(boolean b){
-        String a = "";
-        if (b){
-            a = "Encendido";
-        }else{
-            a = "Apagado";
-        }
-        return a;
-    }
     public static void main (String args[]){
         Radio r = new RadioImp();
 
