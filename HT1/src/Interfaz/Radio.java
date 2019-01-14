@@ -24,4 +24,7 @@ public interface Radio {
 
     //metodo que devuelve la estacion.
     public double getStation();
+
+    //Metodo que ayuda a imprimir el radio en consola
+    public String toString();
 }
