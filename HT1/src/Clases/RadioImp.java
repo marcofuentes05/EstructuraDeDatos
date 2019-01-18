@@ -71,7 +71,7 @@ public class RadioImp implements Radio {
 
     /**
      * Cambiar las estaciones de la radio.
-     * @param up
+     * @param up si el usuario quiere bajar o subir de frecuencia
      */
     public void changeStation(boolean up) {
         if (up){
@@ -114,7 +114,7 @@ public class RadioImp implements Radio {
 
     /**
      * Guardar las estacines en lso respectivos botones.
-     * @param numButton
+     * @param numButton el boton en el cual el usuario quiere guardar la estacion.
      */
     public void saveStation(int numButton) {
         if (frequency){
@@ -126,7 +126,7 @@ public class RadioImp implements Radio {
 
     /**
      * Cambiar de estacion utilizando los botones con estaciones guardadas previamente.
-     * @param numButton
+     * @param numButton el boton en el cual el usuario quiere poner
      */
     public void changeStationButton(int numButton) {
         if(frequency){
