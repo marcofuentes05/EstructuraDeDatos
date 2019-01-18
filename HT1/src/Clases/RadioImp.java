@@ -1,32 +1,65 @@
+/**
+ * Clase RadioImp
+ *
+ * Implementa los metodos de la interfaz para que e radio pueda ejecutar sus funciones basicas.
+ *
+ * @author Marco Fuentes y Abril Palencia
+ * @version 17/01/2019
+ */
+
 package Clases;
 
 import Interfaz.Radio;
 
 public class RadioImp implements Radio {
     //atributos del objeto radio
+    /**
+     * estado y frecuencia actual de la radio
+     */
     private boolean state, frequency; //Frecuencia es True para FM
+    /**
+     * estacion actual de la radio
+     */
     private double station;
-
+    /**
+     * lista de estaciones guardadas. frecuencia  FM.
+     */
     private double listaAM [] = new double [12];
+    /**
+     * lista de estaciones guardadas. fecuencia AM.
+     */
     private double listaFM [] = new double [12];
 
+    /**
+     * constructor por defecto.
+     */
     public RadioImp(){
         this.state = true;
         this.frequency = true;
         this.station = 87.9;
     }
 
-    //metodo para encender y apagar el radio
+    /**
+     *  Enciende y apaga la radio. Cambiar el estado de la radio.
+     */
     public void toggle() {
         this.state = !state;
     }
 
-    //metodo que devuelve si el radio esta apagado o encendido
+    /**
+     * Comprueba si el radio esta apagado o encendido.
+     * @return <ul>
+     *       <li>true: encendido</li>
+     *       <li>false: apagado</li>
+     *       </ul>
+     */
     public boolean getState() {
         return this.state;
     }
 
-    //metodo para cambiar la frecuencia del radio. FM o AM
+    /**
+     * Cambia la frecuencia del radio. FM o Am
+     */
     public void changeFrequency() {
         this.frequency = !frequency;
         if (frequency){
@@ -36,7 +69,10 @@ public class RadioImp implements Radio {
         }
     }
 
-    //metodo para cambiar las estaciones de la radio. sube o baja.
+    /**
+     * Cambiar las estaciones de la radio.
+     * @param up
+     */
     public void changeStation(boolean up) {
         if (up){
             if (frequency){
@@ -65,12 +101,21 @@ public class RadioImp implements Radio {
         }
     }
 
-    //metodo que devuelve la frecuencia en que se encuentra el radio
+    /**
+     * Comprueba en que frecuencia se encuentra la radio.
+     * @return  <ul>
+     *          <li>true: FM</li>
+     *          <li>false: AM</li>
+     *          </ul>
+     */
     public boolean getFrequency() {
         return frequency;
     }
 
-    //metod para guardar las estacones.
+    /**
+     * Guardar las estacines en lso respectivos botones.
+     * @param numButton
+     */
     public void saveStation(int numButton) {
         if (frequency){
             this.listaFM [numButton-1] = this.station;
@@ -79,7 +124,10 @@ public class RadioImp implements Radio {
         }
     }
 
-    //metodo para cambiar alguna estacion guardada
+    /**
+     * Cambiar de estacion utilizando los botones con estaciones guardadas previamente.
+     * @param numButton
+     */
     public void changeStationButton(int numButton) {
         if(frequency){
             this.station = listaFM[numButton-1];
@@ -88,11 +136,18 @@ public class RadioImp implements Radio {
         }
     }
 
-    //metodo que devuelve la estacion.
+    /**
+     * Muestra la estacion  donde se encuentra la radio.
+     * @return estacion
+     */
     public double getStation() {
         return this.station;
     }
 
+    /**
+     * Muestra o imprime el radio en consola.
+     * @return a: la imagen o figura de la radio
+     */
     public String toString(){
         String onOff, frec, a;
         if (state){

@@ -1,30 +1,71 @@
+/**
+ * Interfaz Radio
+ *
+ * Define los metodos y prametros que se utilizaran en la clase RadioImp
+ *
+ * @author Marco Fuentes y Abril Palencia
+ * @version 17/01/2019
+ */
+
 package Interfaz;
 
 public interface Radio {
-    //metodo para encender y apagar el radio
+    //metodos publicos
+    /**
+     *  Enciende y apaga la radio. Cambiar el esttado de la radio
+     */
     public void toggle();
 
-    //metodo que devuelve si el radio esta apagado o encendido
+    /**
+     * Comprueba si el radio esta apagado o encendido.
+     * @return <ul>
+     *       <li>true: encendido</li>
+     *       <li>false: apagado</li>
+     *       </ul>
+     */
     public boolean getState();
 
-    //metodo para cambiar la frecuencia del radio. FM o AM
+    /**
+     * Cambia la frecuencia del radio. FM o Am
+     */
     public void changeFrequency();
 
-    //metodo para cambiar las estaciones de la radio. sube o baja.
+    /**
+     * Cambiar las estaciones de la radio.
+     * @param up
+     */
     public void changeStation(boolean up);
 
-    //metodo que devuelve la frecuencia en que se encuentra el radio
+    /**
+     * Comprueba en que frecuencia se encuentra la radio.
+     * @return  <ul>
+     *          <li>true: FM</li>
+     *          <li>false: AM</li>
+     *          </ul>
+     */
     public boolean getFrequency();
 
-    //metod para guardar las estacones.
+    /**
+     * Guardar las estacines en lso respectivos botones.
+     * @param numButton
+     */
     public void saveStation(int numButton);
 
-    //metodo para cambiar alguna estacion guardada
+    /**
+     * Cambiar de estacion utilizando los botones con estaciones guardadas previamente.
+     * @param numButton
+     */
     public void changeStationButton(int numButton);
 
-    //metodo que devuelve la estacion.
+    /**
+     * Muestra la estacion  donde se encuentra la radio.
+     * @return estacion
+     */
     public double getStation();
 
-    //Metodo que ayuda a imprimir el radio en consola
+    /**
+     * Muestra o imprime el radio en consola.
+     * @return a: la imagen o figura de la radio
+     */
     public String toString();
 }

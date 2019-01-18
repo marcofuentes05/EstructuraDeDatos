@@ -1,3 +1,12 @@
+/**
+ * Clase Main
+ *
+ * Interaccion con el usuario.
+ *
+ * @author Marco Fuentes y Abril Palencia
+ * @version 17/01/2019
+ */
+
 import Clases.RadioImp;
 import Interfaz.Radio;
 
@@ -6,6 +15,10 @@ import java.util.Scanner;
 public class Main {
 
     public static void main (String args[]){
+        //Atributos
+        /**
+         * objeto radio.
+         */
         Radio r = new RadioImp();
 
         while (1>0){
