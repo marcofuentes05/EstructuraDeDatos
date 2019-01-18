@@ -53,7 +53,7 @@ public interface Radio {
 
     /**
      * Cambiar de estacion utilizando los botones con estaciones guardadas previamente.
-     * @param numButton el boton en el cual el usuario quiere poner
+     * @param numButton el boton en el cual el usuario quiere sonar
      */
     public void changeStationButton(int numButton);
 
