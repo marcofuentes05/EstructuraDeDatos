@@ -8,6 +8,7 @@
  */
 
 import Clases.RadioImp;
+import Clases.RadioImp2;
 import Interfaz.Radio;
 
 import java.util.Scanner;
@@ -19,7 +20,7 @@ public class Main {
         /**
          * objeto radio.
          */
-        Radio r = new RadioImp();
+        Radio r = new RadioImp2();
 
         while (1>0){
             System.out.println(r.toString());

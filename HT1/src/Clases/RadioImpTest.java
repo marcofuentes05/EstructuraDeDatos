@@ -1,6 +1,9 @@
 package Clases;
 
+import Interfaz.Radio;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class RadioImpTest {
 
@@ -10,6 +13,10 @@ class RadioImpTest {
 
     @Test
     void getState() {
+        Radio r  = new RadioImp();
+        Boolean esperado = true;
+        Boolean real = r.getState();
+        assertEquals(esperado,real);
     }
 
     @Test
@@ -22,6 +29,10 @@ class RadioImpTest {
 
     @Test
     void getFrequency() {
+        boolean esperado = true;
+        Radio r = new RadioImp();
+        boolean real = r.getFrequency();
+        assertEquals(real, esperado);
     }
 
     @Test
@@ -34,6 +45,10 @@ class RadioImpTest {
 
     @Test
     void getStation() {
+        Radio r = new RadioImp();
+        double real = r.getStation();
+        double esperado = 87.9;
+        assertEquals(esperado,real);
     }
 
     /**@Test
